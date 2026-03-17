@@ -135,7 +135,9 @@ http://127.0.0.1:3000
 ```
 
 ---
-##output
+## output
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8d5ac79f-eaea-4c85-a1c1-339d181329a8" />
+
 
 
 ## 🎯 Key Features
