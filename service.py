@@ -1,15 +1,12 @@
-import bentoml
 import numpy as np
+import bentoml
+from bentoml.io import NumpyNdarray
 
-# Load model
-model = bentoml.sklearn.load_model("iris_clf:latest")
+iris_clf_runner = bentoml.sklearn.get("iris_clf:latest").to_runner()
 
-# Create service
-@bentoml.service
-class IrisService:
+svc = bentoml.Service("iris_classifier", runners=[iris_clf_runner])
 
-    @bentoml.api
-    def predict(self, input_data: list[float]) -> str:
-        arr = np.array(input_data).reshape(1, -1)
-        prediction = model.predict(arr)[0]
-        return str(prediction)
+@svc.api(input=NumpyNdarray(), output=NumpyNdarray())
+def classify(input_series: np.ndarray) -> np.ndarray:
+    result = iris_clf_runner.predict.run(input_series)
+    return result
