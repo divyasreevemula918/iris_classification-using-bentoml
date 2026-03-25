@@ -1,120 +1,86 @@
 # 🌸 Iris Classification using BentoML
 
-🚀 A production-ready Machine Learning project that classifies Iris flowers using a trained model and serves predictions via **BentoML API**.
-
----
-
 ## 📌 Project Overview
+This project is a **Machine Learning API service** that classifies Iris flowers into one of three species — **Setosa, Versicolor, or Virginica** — using a trained classification model and **BentoML** for model serving.
 
-This project demonstrates how to:
-
-* Train a Machine Learning model on the Iris dataset 🌼
-* Save and version the model
-* Serve predictions using **BentoML**
-* Build a simple and scalable ML service
-
----
-
-## 🧠 Problem Statement
-
-Given features of a flower:
-
-* Sepal Length
-* Sepal Width
-* Petal Length
-* Petal Width
-
-👉 Predict the species:
-
-* Setosa 🌸
-* Versicolor 🌿
-* Virginica 🌺
+It demonstrates a simple end-to-end workflow:
+- train a machine learning model
+- save and package the model
+- serve predictions through a BentoML API
+- test the prediction service locally
 
 ---
 
-## 🛠️ Tech Stack
+## 🌐 Live Deployment
+👉 Deployment Link: **https://iris-classification-using-bentoml-6.onrender.com**
 
-* 🐍 Python
-* 🤖 Scikit-learn
-* 📊 Pandas
-* 📦 BentoML
+Example:
+`https://your-bentoml-service-link.com`
+
+> Replace the above with your real deployed API/service link.
+
+---
+
+## 🚀 Features
+- Predict Iris flower species 🌸
+- Machine Learning model trained on Iris dataset
+- API-based serving using BentoML
+- Clean project structure
+- Easy local setup and testing
+- Ready for deployment and further extension
+
+---
+
+## 🧠 Tech Stack
+- Python 🐍
+- Scikit-learn
+- Pandas
+- BentoML
 
 ---
 
 ## 📂 Project Structure
-
-```
-MLService/
-│── bentofile.yaml        # BentoML build config
-│── service.py            # API service
-│── train.py              # Model training script
-│── test.py               # Testing script
-│── requirements.txt      # Dependencies
-```
-
----
-
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone the repository
-
-```
-git clone https://github.com/divyasreevemula918/iris_classification-using-bentoml.git
-cd iris_classification-using-bentoml
-```
-
-### 2️⃣ Create virtual environment
-
-```
-python -m venv venv
-venv\Scripts\activate   # Windows
-```
-
-### 3️⃣ Install dependencies
-
-```
-pip install -r requirements.txt
-```
+iris_classification-using-bentoml/
+│
+├── bentofile.yaml        # BentoML build configuration
+├── service.py            # BentoML service API
+├── train.py              # Model training script
+├── test.py               # Testing script
+├── requirements.txt      # Project dependencies
+└── README.md             # Project documentation
 
 ---
 
-## 🏋️‍♂️ Train the Model
+## ❓ Problem Statement
+Given the measurements of an Iris flower:
+- Sepal Length
+- Sepal Width
+- Petal Length
+- Petal Width
 
-```
-python train.py
-```
+the goal is to predict its species:
+- Setosa
+- Versicolor
+- Virginica
 
-👉 This will:
-
-* Train the model
-* Save it using BentoML
-
----
-
-## 🚀 Build BentoML Service
-
-```
-bentoml build
-```
+This is a classic multiclass classification problem in machine learning.
 
 ---
+## screenshot
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/57f3ce8a-0764-4606-99fc-bd5f6488eeaf" />
 
-## 🌐 Run the API Service
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/187e2c39-d43b-4347-b00b-a03748ee0162" />
 
-```
-bentoml serve
-```
 
-👉 Open in browser:
+## 📥 Input Features
+The model takes the following numeric inputs:
 
-```
-http://127.0.0.1:3000
-```
+- Sepal Length
+- Sepal Width
+- Petal Length
+- Petal Width
 
----
-
-## 📥 Example Input
-
+### Example Input
 ```json
 {
   "sepal_length": 5.1,
@@ -122,52 +88,3 @@ http://127.0.0.1:3000
   "petal_length": 1.4,
   "petal_width": 0.2
 }
-```
-
----
-
-## 📤 Example Output
-
-```json
-{
-  "prediction": "setosa"
-}
-```
-
----
-## output
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8d5ac79f-eaea-4c85-a1c1-339d181329a8" />
-
-
-
-## 🎯 Key Features
-
-✨ Simple ML pipeline
-✨ Model serving using BentoML
-✨ Clean project structure
-✨ Ready for deployment
-
----
-
-## 🔥 Future Improvements
-
-* Add UI (Streamlit / React) 🎨
-* Deploy on AWS / Docker ☁️
-* Add model monitoring 📊
-
----
-
-## 👩‍💻 Author
-
-**Divya Sree Vemula**
-💼 Aspiring ML Engineer
-
----
-
-## ⭐ Support
-
-If you like this project:
-👉 Give it a ⭐ on GitHub
-👉 Share with others 🚀
-
----
