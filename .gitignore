@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Model files (large files 🚫)
+*.h5
+*.keras
+*.pkl
+*.joblib
+
+# BentoML artifacts
+bentoml/
+bento/
+*.bento
+
+# Build / dist
+build/
+dist/
+*.egg-info/
+
+# Environment variables
+.env
+
+# Cache
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Streamlit (if used)
+.streamlit/
+
+# Artifacts folder (your ML pipeline)
+artifacts/
+Artifacts/
